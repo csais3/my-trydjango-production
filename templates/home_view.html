@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Index Page{% endblock title %}
+{% block content %}
+    <h1>Title: {{article.title}} - (id: {{article.id}})</h1>
+    <p>{{article.content}}</p>
+
+    <ul>
+        {% for article in articles %}
+        <li><h1><a href="{% url 'articles:article' article.id %}">{{ article.title }}</a></h1></li>
+        <p>{{article.content}}</p>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
