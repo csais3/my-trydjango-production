@@ -9,7 +9,7 @@ environ.Env.read_env()
 
 def main():
     """Run administrative tasks."""
-    dotenv.read_dotenv()
+    environ.Env.read_env()
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'trydjango.settings')
     try:
         from django.core.management import execute_from_command_line
